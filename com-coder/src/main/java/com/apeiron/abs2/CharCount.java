@@ -8,6 +8,9 @@ import java.util.*;
 public class CharCount implements Comparable<CharCount> {
     static String inputString;
     static Set<CharCount> set;
+    static Set<Character> cset;
+    static List<CharCount> list;
+    static List<Character> clist;
     char character;
     int count;
 
@@ -18,12 +21,14 @@ public class CharCount implements Comparable<CharCount> {
 
     public static void main(String[] args) throws IOException {
         set = new HashSet<CharCount>();
+        cset = new HashSet<Character>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         inputString = reader.readLine();
         inputString = inputString.toUpperCase(Locale.ROOT);
         char[] chars = inputString.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             int counter = 0;
+            cset.add(Character.valueOf(chars[i]));
             for (int j = 0; j < chars.length; j++) {
                 if (chars[i] == chars[j]) {
                     counter++;
@@ -36,16 +41,17 @@ public class CharCount implements Comparable<CharCount> {
         // sort the set >> set -> list, sort the list, list to set
         System.out.println("Unsorted & Non Duplicate Data : " + set.toString());
         // list is chosen to sort
-        List<CharCount> list = new ArrayList<CharCount>(set);
+        list = new ArrayList<CharCount>(set);
         Collections.sort(list);
         System.out.println("Sorted Data : " + list.toString());
         Set<CharCount> set1 = new HashSet<CharCount>(list);
-
         // and show all the unique characters in the input string amd its count
-
+        clist = new ArrayList<Character>(cset);
+        Collections.sort(clist);
+        System.out.println("Unique Characters in sorted order : " +clist.toString() +" Count " +clist.size());
         // size of set should match with the number of unique elements in the input string
         if (list.size() == set.size()) ;
-        System.out.println("Set & List size matches");
+        System.out.println("Set size " + set.size() + " & List size " +list.size() +" matches : ");
     }
 
     @Override
