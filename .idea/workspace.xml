@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c01e5c-1856-4395-b04a-7ff5f8f9b89d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/com-coder/src/main/java/com/apeiron/abs2/CharCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com-coder/src/main/java/com/apeiron/abs2/CharCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/com-coder/src/main/java/com/apeiron/abs2/CharCount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631228132681</updated>
       <workItem from="1631228138189" duration="840000" />
-      <workItem from="1631229056890" duration="4117000" />
+      <workItem from="1631229056890" duration="4942000" />
     </task>
     <servers />
   </component>
@@ -92,17 +93,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/com-coder/src/main/java/com/apeiron/abs2/CharCount.java</url>
-          <line>23</line>
+          <line>24</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/com-coder/src/main/java/com/apeiron/abs2/CharCount.java</url>
-          <line>24</line>
+          <line>25</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/com-coder/src/main/java/com/apeiron/abs2/CharCount.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

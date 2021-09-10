@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.Set;
 
 public class CharCount {
@@ -35,6 +36,11 @@ public class CharCount {
             set.add(new CharCount(chars[i], counter));
         } // end i loop
         System.out.println(set.toString());
+        // sort the set using a custom comparator
+
+        // and show all the unique characters in the input string
+        
+        // size of set should match with the number of unique elements in the input string
     }
 
     @Override
@@ -44,4 +50,18 @@ public class CharCount {
                 ", count=" + count +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CharCount)) return false;
+        CharCount charCount = (CharCount) o;
+        return character == charCount.character && count == charCount.count;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(character, count);
+    }
 }
+
