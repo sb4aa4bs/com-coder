@@ -3,18 +3,15 @@ package com.apeiron.abs2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
-public class CharCount {
+public class CharCount implements Comparable<CharCount> {
     static String inputString;
     static Set<CharCount> set;
     char character;
     int count;
 
-    public CharCount(char character, int count){
+    public CharCount(char character, int count) {
         this.character = character;
         this.count = count;
     }
@@ -33,14 +30,27 @@ public class CharCount {
                 }
             } // end j loop
             /*System.out.println("Element " +chars[i] +" count is " +counter);*/
+            // set is chosen to filter duplicates
             set.add(new CharCount(chars[i], counter));
         } // end i loop
-        System.out.println(set.toString());
-        // sort the set using a custom comparator
+        // sort the set >> set -> list, sort the list, list to set
+        System.out.println("Unsorted & Non Duplicate Data : " + set.toString());
+        // list is chosen to sort
+        List<CharCount> list = new ArrayList<CharCount>(set);
+        Collections.sort(list);
+        System.out.println("Sorted Data : " + list.toString());
+        Set<CharCount> set1 = new HashSet<CharCount>(list);
 
-        // and show all the unique characters in the input string
-        
+        // and show all the unique characters in the input string amd its count
+
         // size of set should match with the number of unique elements in the input string
+        if (list.size() == set.size()) ;
+        System.out.println("Set & List size matches");
+    }
+
+    @Override
+    public int compareTo(CharCount cc1) {
+        return Character.valueOf(this.character).compareTo(Character.valueOf(cc1.character));
     }
 
     @Override
@@ -63,5 +73,5 @@ public class CharCount {
     public int hashCode() {
         return Objects.hash(character, count);
     }
-}
 
+}
