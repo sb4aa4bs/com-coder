@@ -15,8 +15,7 @@ class PalindromeNumber {
         int originalValue = x;
         int initialCounter = 1;
         int finalSum = 0;
-        int altX = 0;
-        altX = x;
+        int altX = x;
         while (altX >= 10) {
             altX = altX / 10;
             initialCounter = initialCounter * 10;
