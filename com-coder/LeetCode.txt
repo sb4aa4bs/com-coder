@@ -2,4 +2,5 @@ two-sum = https://leetcode.com/problems/two-sum/solution/
 two-sum-ii = https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 two-sum-less-than = https://leetcode.com/problems/two-sum-less-than-k/
 palindrome = https://leetcode.com/problems/palindrome-number/
+longest-common-prefix = https://leetcode.com/problems/longest-common-prefix/
 
