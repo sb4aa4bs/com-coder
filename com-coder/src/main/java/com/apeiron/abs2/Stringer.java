@@ -4,7 +4,6 @@ package com.apeiron.abs2;
 
 public class Stringer {
 
-
     static String input = "thisisalongstring";
     static String pref = "sitgo";
 
@@ -17,14 +16,11 @@ public class Stringer {
             for (int j = 0; j < input.length(); j++) {
                 if (pref.charAt(i) == input.charAt(j)) {
                     str.append(pref.charAt(i));
-
                 } else {
                     if (pref.indexOf(input.charAt(j)) == -1 && str1.indexOf(String.valueOf(input.charAt(j))) == -1) {
                         str1.append(input.charAt(j));
                     }
-
                 }
-
             }
         }
         output = str.toString() + str1.toString();
