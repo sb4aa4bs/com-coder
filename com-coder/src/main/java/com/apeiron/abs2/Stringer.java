@@ -1,6 +1,6 @@
 package com.apeiron.abs2;
 
-//- eg. Order = ‘sitgo’.  Input String = ‘thisisalongstring’.output will be ‘sssiiittggohalnrn’
+//- eg. Order = ‘sitgo’.  Input String = ‘thisisalongstring’.output will be ‘sssiiittggohalnr’
 
 public class Stringer {
 
@@ -27,6 +27,7 @@ public class Stringer {
 
             }
         }
-        System.out.println("Output " + str.toString() + str1.toString());
+        output = str.toString() + str1.toString();
+        System.out.println("Final Output " + output);
     }
 }
