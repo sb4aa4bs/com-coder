@@ -1,0 +1,2 @@
+https://rollbar.com/blog/java-exceptions-hierarchy-explained/
+https://www.baeldung.com/java-try-with-resources
