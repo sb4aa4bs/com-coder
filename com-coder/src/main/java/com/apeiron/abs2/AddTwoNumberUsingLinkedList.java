@@ -23,9 +23,19 @@ class ListNode {
 public class AddTwoNumberUsingLinkedList {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode node = new ListNode();
+        ListNode resultNode = new ListNode();
+        ListNode ln1 = l1, ln2 = l2;
+        System.out.println("LinkedList1: " + l1.getVal() + l1.getNext().getVal() + l1.getNext().getNext().getVal());
+        System.out.println("LinkedList2: " + l2.getVal() + l2.getNext().getVal() + l2.getNext().getNext().getVal());
+        while (ln1 != null && ln2 != null) {
+            System.out.println("L1 : " + ln1.getVal());
+            System.out.println("L2 : " + ln2.getVal());
+            ln1 = ln1.next;
+            ln2 = ln2.next;
+        }
+        ListNode result = new ListNode();
 
-        return node;
+        return resultNode;
     }
 
     public static void main(String[] args) {
