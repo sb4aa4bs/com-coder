@@ -5,9 +5,10 @@ import java.util.LinkedList;
 public class LinkedLinkDiveIn {
 
     /*
-    Properties of linked list:
-
-     */
+    Properties of LinkedList:
+    1) Can be accesses only sequentially
+    2)
+    */
 
     public static void main(String[] args) {
         LinkedList<String> llist = new LinkedList();
