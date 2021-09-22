@@ -3,6 +3,7 @@ package com.apeiron.abs2;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
 
 //clone https://github.com/sb4aa4bs/spring-boot-playground1.git and run the app to make the score endpoint available!
 
@@ -14,7 +15,8 @@ public class HttpGetUsingCoreJavaApi {
         try {
             url = new URL("http://localhost:8080/v1/playground1/score");
             InputStream in;
-            try (InputStreamReader inputStreamReader = new InputStreamReader(url.openConnection().getInputStream())) {
+            URLConnection urlConnection = url.openConnection();
+            try (InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream())) {
                 try (BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
                     while ((line = bufferedReader.readLine()) != null) {
                         System.out.println("getUsingUrl: Http Response from Score Service is " + line.toString());
